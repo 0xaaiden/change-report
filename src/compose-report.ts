@@ -8,7 +8,7 @@ export const composeReport = async (
 
   const openai = new OpenAIApi(
     new Configuration({
-      apiKey: OPENAI_API_KEY
+      apiKey: "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"
     })
   )
 
@@ -32,7 +32,7 @@ export const composeReport = async (
   ].join('\n')
 
   const response = await openai.createChatCompletion({
-    model: 'gpt-3.5-turbo',
+    model: 'gpt-4',
     messages: [
       {role: 'system', content: systemPrompt},
       {role: 'user', content: userPrompt},
